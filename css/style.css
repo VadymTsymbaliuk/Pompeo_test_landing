@@ -1,8 +1,91 @@
-@font-face {
-    src: url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
-}
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-size: 2.86rem;
+}
+
+h3 {
+    font-size: 2.1rem;
+}
+
+h4 {
+    font-size: 1.7rem;
+}
+
+.section-1 {
+    display: flex;
+    background-image: url("../images/sec-1/sec-1__bg.png");
+    background-position: center center;
+    background-size: cover;
+    padding: 120px 0;
+}
+
+.section-1 img {
+    max-width: 100%;
+}
+
+.section-2 {
+    padding: 120px 0;
+    border-bottom: 1px solid #EBEBEB;
+}
+
+.section-2_title {
+    text-align: center;
+}
+
+.section-2_title span {
+    color: #D77474;
+    font-weight: 700;
+}
+
+.section-2_title h2 {
+    margin-top: 10px;
+}
+
+.section-2 .col {
+    display: flex;
+    gap: 50px;
+    padding: 45px 0;
+}
+.section-2 .col img{
+    max-width: 240px;
+    width: 100%;
+}
+.section-3 img{
+    max-width: 100%;
+}
+.section-3 .text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+.section-3 a{
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+.section-3 a:hover{
+    color: gray;
+    transition: 0.3s;
 }
