@@ -32,6 +32,28 @@ h4 {
     font-size: 1.7rem;
 }
 
+.nav-link.active {
+    color: #AC1313 !important;
+}
+
+.nav-link:hover {
+    color: #c50b0b;
+    background-color: #a6a3a3;
+    transition: 0.3s;
+}
+
+.btn {
+    padding: 20px 40px;
+    background-color: #AC1313;
+    color: #FFF;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
 .section-1 {
     display: flex;
     background-image: url("../images/sec-1/sec-1__bg.png");
@@ -49,16 +71,16 @@ h4 {
     border-bottom: 1px solid #EBEBEB;
 }
 
-.section-2_title {
+.section_title {
     text-align: center;
 }
 
-.section-2_title span {
+.section_title span {
     color: #D77474;
     font-weight: 700;
 }
 
-.section-2_title h2 {
+.section_title h2 {
     margin-top: 10px;
 }
 
@@ -67,25 +89,160 @@ h4 {
     gap: 50px;
     padding: 45px 0;
 }
-.section-2 .col img{
+
+.section-2 .col img {
     max-width: 240px;
     width: 100%;
 }
-.section-3 img{
+
+.section-2 .container-img {
+    justify-content: space-around;
+    position: relative;
+}
+
+.section-2 .container-img:before {
+    position: absolute;
+    content: "Hand Craft Pottery";
+    top: 40%;
+    left: -12%;
+    transform: rotate(270deg);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 34px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #DBDBDB;
+}
+
+.section-3 .container {
+    padding: 77px 0;
+}
+
+.section-3 .row:nth-child(1):before {
+    position: absolute;
+    content: "Featured Products";
+    bottom: 20%;
+    right: -12%;
+    transform: rotate(270deg);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 34px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #DBDBDB;
+}
+
+.section-3 img {
     max-width: 100%;
 }
-.section-3 .text-container{
+
+.section-3 .text-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
 }
-.section-3 a{
+
+.section-3 a {
     text-decoration: none;
     color: black;
     font-weight: 700;
 }
-.section-3 a:hover{
+
+.section-3 a:hover {
     color: gray;
     transition: 0.3s;
 }
+
+.section-4 {
+    padding-top: 88px;
+    padding-bottom: 120px;
+}
+
+.section-4 .row {
+    gap: 20px;
+    justify-content: center;
+}
+
+.section-4 .row-cols {
+    position: relative;
+}
+
+.section-4 .row-cols:before {
+    position: absolute;
+    content: "Product Collections";
+    top: 45%;
+    left: -12%;
+    transform: rotate(270deg);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 34px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #DBDBDB;
+}
+
+.section-4 .row-cols > * {
+    flex: 0 0 auto;
+    width: 30%;
+}
+
+.section-4 .col {
+    border-bottom: 1px solid #DBDBDB;
+    padding: 0;
+}
+
+.section-4 img {
+    width: 100%;
+}
+
+.section-4 h5 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #6C6C6C;
+}
+
+.section-4 p {
+    margin: 0;
+}
+
+.section-4 .button-container {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.section-5 {
+    padding: 120px 0;
+    background-image: url("../images/sec-5/sec-5_bg-img.png");
+    background-color: rgba(196, 189, 189, 0.39);
+    background-blend-mode: lighten;
+    height: 471px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.section-5 .col{
+    max-width: 421px;
+}
+
+.section-5 span {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #D77474;
+}
+
+.section-5 p {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #6C6C6C;
+}
+.section-5 a{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #AC1313;
+}
+
