@@ -1,18 +1,37 @@
+@font-face {
+    font-family: LibreFranklin;
+    src: url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;700&display=swap");
+    font-weight: 400;
+}
+@font-face {
+    font-family: Pacifico;
+    src: url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+    font-weight: 400;
+}
+@font-face {
+    font-family: Poppins;
+    src: url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --color-link: #6C6C6C;
+    --active-link: #c50b0b;
+}
 
 html, body {
-    font-family: 'Libre Franklin', sans-serif;
+    font-family: LibreFranklin, sans-serif;
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Poppins', sans-serif;
+    font-family: Poppins, sans-serif;
     font-weight: 700;
 }
 
@@ -31,35 +50,103 @@ h3 {
 h4 {
     font-size: 1.7rem;
 }
-header .title{
-    font-family: 'Pacifico',sans-serif;
+
+.container{
+    max-width: 1200px;
+    position: relative;
+}
+
+.navbar {
+    width: 100%;
+    height: 90px;
+}
+
+.navbar .container {
+    height: auto;
+    display: flex;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar .navbar-brand{
+    margin-top: 13px;
+    font-family: Pacifico, sans-serif;
     font-size: 33px;
     line-height: 40px;
+    text-decoration: none;
+    color: black;
 }
 
-.nav-link.active {
-    color: #AC1313 !important;
+.navbar-wrap {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: 13px;
+    align-items: center;
 }
 
-.nav-link:hover {
-    color: #c50b0b;
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    height: 64px;
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+    margin: 0 20px 0 0;
+}
+
+
+.navbar-menu .nav-item {
+    display: inline-block;
+}
+
+.nav-item .active {
+    color: var(--active-link) !important;
+}
+
+.nav-item a {
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 22px;
+    color: var(--color-link);
+}
+
+.nav-item a:hover {
+    color: var(--active-link);
     background-color: #a6a3a3;
     transition: 0.3s;
 }
-.cart{
+
+.cart {
     position: relative;
-    padding-left: 30px;
-    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    height: 38px;
+    padding-left: 41px;
+    padding-right: 3px;
+    background: none;
+    border: none;
+    border-radius: 5px;
     border-left: 1px solid #EBEBEB;
+    cursor: pointer;
 }
-.cart:before{
+
+.cart:before {
     position: absolute;
-    top: 8px;
-    left: 10px;
+    top: 7px;
+    left: 15px;
     content: "";
     background-image: url("../images/header/nav-cart.svg");
     height: 20px;
     width: 20px;
+}
+.cart:hover{
+    background-color: rgba(199, 199, 199, 0.56);
 }
 
 .btn {
@@ -70,16 +157,66 @@ header .title{
     font-size: 12px;
     line-height: 22px;
     text-align: center;
-    letter-spacing: 1px;
     text-transform: uppercase;
+    border: none;
+}
+
+.d-flex{
+    display: flex;
+}
+.flex-column{
+    flex-direction: column;
+}
+.flex-row{
+    flex-direction: row;
+}
+.justify-center{
+    justify-content: center;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.justify-around{
+    justify-content: space-around;
+}
+
+.section .container{
+    width: 1175px;
+    /*height: 454px;*/
+    display: flex;
+    margin: 0 auto;
+    padding:0  10px;
+}
+.section-1 .container div{
+    flex: 1 1 auto;
 }
 
 .section-1 {
     display: flex;
-    background-image: url("../images/sec-1/sec-1__bg.png");
-    background-position: center center;
+    background-image: url("../images/sec-1/sec-1_bg.png");
+    background-position: center bottom;
     background-size: cover;
     padding: 120px 0;
+}
+.section-1 span{
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #D77474;
+    margin-bottom: 12px;
+}
+.section-1 h1{
+    line-height: 58px;
+    margin-bottom: 14px;
+}
+.section-1 p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: .34px;
+}
+.section-1 .btn{
+    margin-top: 51px;
+    max-width: 201px;
 }
 
 .section-1 img {
@@ -87,8 +224,12 @@ header .title{
 }
 
 .section-2 {
+    position: relative;
     padding: 120px 0;
     border-bottom: 1px solid #EBEBEB;
+}
+.section-2 .section_title{
+    margin-bottom: 60px;
 }
 
 .section_title {
@@ -98,6 +239,9 @@ header .title{
 .section_title span {
     color: #D77474;
     font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase
 }
 
 .section_title h2 {
@@ -116,15 +260,17 @@ header .title{
 }
 
 .section-2 .container-img {
-    justify-content: space-around;
     position: relative;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 90px;
 }
 
 .section-2 .container-img:before {
     position: absolute;
     content: "Hand Craft Pottery";
     top: 40%;
-    left: -12%;
+    left: -10%;
     transform: rotate(270deg);
     font-weight: 400;
     font-size: 18px;
